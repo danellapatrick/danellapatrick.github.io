@@ -17,20 +17,24 @@
       font: 80px/1.1em 'opensans-bold', sans-serif;
       letter-spacing: -1px;
       margin: 0 auto 12px auto;
-   }
+      
 
 }
 
 /* screenwidth less than 900px
 --------------------------------------------------------------------- */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
 
     /* header styles
    ------------------------------------------------------------------ */
    header .banner { padding-bottom: 12px; }
    header .banner-text h1 {
-      font: 78px/1.1em 'opensans-bold', sans-serif;
-      letter-spacing: -1px;      
+      font: 58px/1.1em 'opensans-bold', sans-serif;
+      letter-spacing: -1px;
+      animation: typewriter 2s steps(13) infinite alternate,
+          blink 800ms steps(13) infinite normal;
+      border-right: 5px solid black;
+      
    }
    header .banner-text h3 {
       font: 17px/1.9em 'librebaskerville-regular', serif;
@@ -191,7 +195,7 @@
       padding-bottom: 12px;
       padding-top: 6px;
    }
-   header .banner-text h1 { font: 68px/1.1em 'opensans-bold', sans-serif; }
+   header .banner-text h1 { font: 48px/1.1em 'opensans-bold', sans-serif; }
    header .banner-text h3 {
       font: 16px/1.9em 'librebaskerville-regular', serif;
       width: 85%;
@@ -346,14 +350,33 @@
    /* mobile navigation
    -------------------------------------------------------------------- */
    #nav-wrap ul#nav { width: auto; float: none; }
+   
 
    /* header styles
    -------------------------------------------------------------------- */
    header .banner { padding-top: 24px; }
    header .banner-text h1 {
-      font: 40px/1.1em 'opensans-bold', sans-serif;      
-      margin: 0 auto 24px auto;
+      white-space: nowrap;
+      font: 30px/1.1em 'opensans-bold', sans-serif;      
+      margin: 0 auto 20px auto;
    }
+   
+@keyframes typewriter {
+   from {
+     width: 0%;
+   }
+   to {
+     width: 100%;
+   }
+ }
+ @keyframes blink {
+   from {
+     border-color: #fff;
+   }
+   to {
+     border-color: transparent;
+   }
+ }
    header .banner-text h3 {
       font: 14px/1.9em 'librebaskerville-regular', sans-serif;
       width: 90%;
@@ -370,7 +393,8 @@
    footer .social-links { font-size: 20px; }
    footer .social-links li { margin-left: 14px; }   
 
-}
+}}
+
 
 
 
